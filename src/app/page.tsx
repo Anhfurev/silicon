@@ -1,65 +1,251 @@
-import Image from "next/image";
+"use client"
 
-export default function Home() {
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import { useEffect, useState } from "react"
+
+export default function Page() {
+  const [currentProduct, setCurrentProduct] = useState(0)
+  const products = [
+    "SILICON-ERP",
+    "Silicon-Accounting",
+    "Silicon-Finance",
+    "Silicon-HRM",
+    "Silicon-AI Agent",
+    "Silicon-Project Management",
+  ]
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentProduct((prev) => (prev + 1) % products.length)
+    }, 2000)
+    return () => clearInterval(interval)
+  }, [products.length])
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      {/* Animated Product Showcase Section */}
+      <section className="relative py-32 px-6 lg:px-8 overflow-hidden bg-gradient-to-b from-background via-muted/30 to-background">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:64px_64px]" />
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#319799]/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#319799]/5 rounded-full blur-3xl" />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="relative mx-auto max-w-7xl">
+          <div className="text-center space-y-12">
+            <div className="space-y-4">
+              <div className="inline-block px-4 py-2 bg-background border border-border rounded-full text-sm font-medium">
+                Бүтээгдэхүүн
+              </div>
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance">
+                Иж бүрэн
+                <br />
+                <span className="text-[#319799]">SILICON</span> систем
+              </h2>
+            </div>
+
+            <div className="relative min-h-[30px] flex items-center justify-center">
+              <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-center">
+                {products.map((product, index) => (
+                  <div
+                    key={product}
+                    className={`absolute inset-0 flex items-center justify-center transition-all duration-700 ${
+                      index === currentProduct
+                        ? "opacity-100 translate-y-0 scale-100"
+                        : index === (currentProduct - 1 + products.length) % products.length
+                          ? "opacity-0 -translate-y-8 scale-95"
+                          : "opacity-0 translate-y-8 scale-95"
+                    }`}
+                  >
+                    <span className={index === 0 ? "text-[#319799]" : "text-foreground"}>{product}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex items-center justify-center gap-2 pt-8">
+              {products.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentProduct(index)}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    index === currentProduct ? "w-12 bg-[#319799]" : "w-2 bg-border hover:bg-border/70"
+                  }`}
+                  aria-label={`Go to product ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
         </div>
-      </main>
+      </section>
+
+      {/* About Section */}
+      <section className="py-24 px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="text-center space-y-4 mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+              <span className="text-[#319799]">BT Solution</span> компанийн тухай
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-balance">
+              Аж ахуйн нэгж, байгууллагуудын санхүү, үйлдвэрлэл, нягтлан бодох бүртгэлийн үйл ажиллагааг автоматжуулах{" "}
+              <strong className="text-[#319799] font-semibold">SILICON</strong> цогц систем
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="group relative p-8 bg-background border border-border rounded-2xl hover:border-[#319799]/50 transition-all duration-300">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-[#319799]/5 rounded-bl-[100px] transition-all duration-300 group-hover:w-32 group-hover:h-32" />
+              <div className="relative space-y-4">
+                <div className="text-5xl font-bold text-[#319799]/20">2005</div>
+                <h3 className="text-xl font-semibold">Үүсгэн байгуулагдсан</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  &ldquo;Би Ти Солюшн&rdquo; ХХК компани нь 2005 онд үүсгэн байгуулагдсан бөгөөд 20 гаруй жил үйл ажиллагаа явуулж байна.
+                </p>
+              </div>
+            </div>
+
+            <div className="group relative p-8 bg-background border border-border rounded-2xl hover:border-[#319799]/50 transition-all duration-300">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-[#319799]/5 rounded-bl-[100px] transition-all duration-300 group-hover:w-32 group-hover:h-32" />
+              <div className="relative space-y-4">
+                <div className="text-5xl font-bold text-[#319799]/20">20+</div>
+                <h3 className="text-xl font-semibold">Жил туршлага</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Манай компани нь бүх төрлийн аж ахуйн нэгж, бизнесийн байгууллагуудад зориулсан SILICON нэрийн иж бүрэн системийг хөгжүүлэн гаргаж, нэвтрүүлж ирлээ.
+                </p>
+              </div>
+            </div>
+
+            <div className="group relative p-8 bg-background border border-border rounded-2xl hover:border-[#319799]/50 transition-all duration-300">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-[#319799]/5 rounded-bl-[100px] transition-all duration-300 group-hover:w-32 group-hover:h-32" />
+              <div className="relative space-y-4">
+                <div className="text-5xl font-bold text-[#319799]/20">100+</div>
+                <h3 className="text-xl font-semibold">Байгууллага</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Манай бүтээгдэхүүн үйлчилгээг төрийн болон төрийн бус байгууллага, аж ахуйн нэгжүүд нэвтрүүлэн ажиллаж байна.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Features Section */}
+      <section className="py-24 px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="text-center space-y-4 mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+              <span className="text-[#319799]">SILICON</span> системийн давуу тал
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-balance">
+              Байгууллагын үйл ажиллагааг бүхэлд нь хамарсан иж бүрэн шийдэл
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="group relative p-8 bg-background border border-border rounded-2xl hover:border-[#319799]/50 transition-all duration-300">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-[#319799]/5 rounded-bl-[100px] transition-all duration-300 group-hover:w-32 group-hover:h-32" />
+              <div className="relative space-y-4">
+                <div className="text-5xl font-bold text-[#319799]/20">01</div>
+                <h3 className="text-xl font-semibold">Санхүүгийн төлөвлөлт</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Байгууллагын санхүүгийн төлөвлөлтийг боловсронгуй болгож, урьдчилан таамаглах боломж олгоно
+                </p>
+              </div>
+            </div>
+
+            <div className="group relative p-8 bg-background border border-border rounded-2xl hover:border-[#319799]/50 transition-all duration-300">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-[#319799]/5 rounded-bl-[100px] transition-all duration-300 group-hover:w-32 group-hover:h-32" />
+              <div className="relative space-y-4">
+                <div className="text-5xl font-bold text-[#319799]/20">02</div>
+                <h3 className="text-xl font-semibold">Орлого зарлагын хяналт</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Орлого зарлагын зарцуулалтыг бодитой цагт хянах, тайлан гаргах функц
+                </p>
+              </div>
+            </div>
+
+            <div className="group relative p-8 bg-background border border-border rounded-2xl hover:border-[#319799]/50 transition-all duration-300">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-[#319799]/5 rounded-bl-[100px] transition-all duration-300 group-hover:w-32 group-hover:h-32" />
+              <div className="relative space-y-4">
+                <div className="text-5xl font-bold text-[#319799]/20">03</div>
+                <h3 className="text-xl font-semibold">Гүйцэтгэлийн үнэлгээ</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Бусад үйл ажиллагааны гүйцэтгэлд тавих удирдлагын хяналтыг хэрэгжүүлнэ
+                </p>
+              </div>
+            </div>
+
+            <div className="group relative p-8 bg-background border border-border rounded-2xl hover:border-[#319799]/50 transition-all duration-300">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-[#319799]/5 rounded-bl-[100px] transition-all duration-300 group-hover:w-32 group-hover:h-32" />
+              <div className="relative space-y-4">
+                <div className="text-5xl font-bold text-[#319799]/20">04</div>
+                <h3 className="text-xl font-semibold">Нягтлан бодох бүртгэл</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Нягтлан бодох бүртгэлийн үйл ажиллагааг бүрэн автоматжуулсан систем
+                </p>
+              </div>
+            </div>
+
+            <div className="group relative p-8 bg-background border border-border rounded-2xl hover:border-[#319799]/50 transition-all duration-300">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-[#319799]/5 rounded-bl-[100px] transition-all duration-300 group-hover:w-32 group-hover:h-32" />
+              <div className="relative space-y-4">
+                <div className="text-5xl font-bold text-[#319799]/20">05</div>
+                <h3 className="text-xl font-semibold">Үйлдвэрлэлийн удирдлага</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Үйлдвэрлэлийн процессыг хянах, оновчтой болгох боломжийг олгоно
+                </p>
+              </div>
+            </div>
+
+            <div className="group relative p-8 bg-background border border-border rounded-2xl hover:border-[#319799]/50 transition-all duration-300">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-[#319799]/5 rounded-bl-[100px] transition-all duration-300 group-hover:w-32 group-hover:h-32" />
+              <div className="relative space-y-4">
+                <div className="text-5xl font-bold text-[#319799]/20">06</div>
+                <h3 className="text-xl font-semibold">Тайлан мэдээлэл</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Олон төрлийн удирдлагын тайлан, аналитик мэдээлэл гаргах систем
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 px-6 lg:px-8 bg-gradient-to-br from-[#319799]/10 via-background to-background">
+        <div className="mx-auto max-w-7xl">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#319799] to-[#267577] p-12 lg:p-16">
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:32px_32px]" />
+            <div className="relative max-w-3xl space-y-8">
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white text-balance">
+                Бизнесээ шинэ түвшинд гаргахад бэлэн үү?
+              </h2>
+              <p className="text-xl text-white/90 text-pretty leading-relaxed">
+                Манай мэргэжилтнүүд таны байгууллагын онцлогт тохирсон шийдлийг санал болгоход бэлэн байна.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="text-base bg-white hover:bg-white/90 text-[#319799]"
+                  asChild
+                >
+                  <Link href="/contact">Үнэгүй зөвлөгөө авах</Link>
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="text-base border-white/30 text-white hover:bg-white/10 bg-transparent"
+                  asChild
+                >
+                  <Link href="/products">Бүтээгдэхүүн танилцах</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-  );
+  )
 }

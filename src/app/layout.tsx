@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { VoiceInputProvider } from "@/providers/Feature.povider";
+import VoiceInputButton from "@/components/custom/section/feature";
+import { Header } from "@/layouts/header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +30,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <VoiceInputProvider>
+          <Header />
+          {children}
+          <VoiceInputButton />
+        </VoiceInputProvider>
       </body>
     </html>
   );
