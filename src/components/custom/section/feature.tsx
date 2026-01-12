@@ -30,9 +30,7 @@ export default function VoiceInputButton() {
       if (transcript && transcript !== processedTranscriptRef.current) {
         processedTranscriptRef.current = transcript
         
-        console.log("🎤 Received transcript:", transcript)
-        console.log("🎤 Transcript length:", transcript.length)
-        console.log("🎤 Transcript characters:", Array.from(transcript).map(c => `${c} (${c.charCodeAt(0)})`).join(", "))
+        console.log("Processing transcript:", transcript)
         const result = matchQuestion(transcript)
 
         // Use setTimeout to avoid synchronous setState in effect

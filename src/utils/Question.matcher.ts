@@ -3,16 +3,13 @@ import faq from "@/utils/faq.json"
 import { normalize, calculateSimilarity } from "./normalize"
 import { FAQ } from "@/types/main/faq.types"
 
-// Similarity threshold for matching (0.5 = 50% similarity - lowered for better matching)
-const SIMILARITY_THRESHOLD = 0.5
+// Similarity threshold for matching (0.6 = 60% similarity)
+const SIMILARITY_THRESHOLD = 0.6
 
 export function matchQuestion(input: string): FAQ | null {
   if (!input || input.trim().length === 0) return null
 
   const normalizedInput = normalize(input)
-  console.log("🔍 Matching input:", input)
-  console.log("🔍 Normalized input:", normalizedInput)
-  
   let bestMatch: FAQ | null = null
   let bestSimilarity = 0
 
@@ -20,14 +17,12 @@ export function matchQuestion(input: string): FAQ | null {
   for (const item of faq as FAQ[]) {
     const normalizedQuestion = normalize(item.question)
     if (normalizedQuestion === normalizedInput) {
-      console.log("✅ Exact match found:", item.question)
       return item
     }
 
     for (const alt of item.alternatives) {
       const normalizedAlt = normalize(alt)
       if (normalizedAlt === normalizedInput) {
-        console.log("✅ Exact match found in alternatives:", alt)
         return item
       }
     }
@@ -54,13 +49,10 @@ export function matchQuestion(input: string): FAQ | null {
 
   // Return match if similarity is above threshold
   if (bestMatch && bestSimilarity >= SIMILARITY_THRESHOLD) {
-    console.log(`✅ Matched: "${input}" -> "${bestMatch.question}" (similarity: ${(bestSimilarity * 100).toFixed(1)}%)`)
+    console.log(`Matched: "${input}" -> "${bestMatch.question}" (similarity: ${(bestSimilarity * 100).toFixed(1)}%)`)
     return bestMatch
   }
 
-  console.log(`❌ No match found for: "${input}" (best similarity: ${(bestSimilarity * 100).toFixed(1)}%, threshold: ${(SIMILARITY_THRESHOLD * 100).toFixed(1)}%)`)
-  if (bestMatch) {
-    console.log(`   Closest match was: "${bestMatch.question}"`)
-  }
+  console.log(`No match found for: "${input}" (best similarity: ${(bestSimilarity * 100).toFixed(1)}%)`)
   return null
 }

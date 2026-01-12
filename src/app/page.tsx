@@ -26,9 +26,9 @@ export default function Page() {
     <div className="min-h-screen">
       {/* Hero Section */}
       {/* Animated Product Showcase Section */}
-      <section className="relative py-32 px-6 lg:px-8 overflow-hidden bg-gradient-to-b from-background via-muted/30 to-background">
+      <section className="relative py-32 px-6 lg:px-8 overflow-hidden bg-linear-to-b from-background via-muted/30 to-background">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:64px_64px]" />
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-size-[64px_64px]" />
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#319799]/5 rounded-full blur-3xl" />
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#319799]/5 rounded-full blur-3xl" />
         </div>
@@ -46,7 +46,7 @@ export default function Page() {
               </h2>
             </div>
 
-            <div className="relative min-h-[30px] flex items-center justify-center">
+            <div className="relative flex items-center justify-center">
               <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-center">
                 {products.map((product, index) => (
                   <div
@@ -213,10 +213,10 @@ export default function Page() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 lg:px-8 bg-gradient-to-br from-[#319799]/10 via-background to-background">
+      <section className="py-24 px-6 lg:px-8 bg-linear-to-br from-[#319799]/10 via-background to-background">
         <div className="mx-auto max-w-7xl">
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#319799] to-[#267577] p-12 lg:p-16">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:32px_32px]" />
+          <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-[#319799] to-[#267577] p-12 lg:p-16">
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-size-[32px_32px]" />
             <div className="relative max-w-3xl space-y-8">
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white text-balance">
                 Бизнесээ шинэ түвшинд гаргахад бэлэн үү?

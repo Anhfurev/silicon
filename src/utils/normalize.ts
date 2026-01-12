@@ -1,7 +1,5 @@
 // services/normalize.ts
 export function normalize(text: string) {
-  if (!text) return ""
-  
   return text
     .toLowerCase()
     .normalize("NFD") // Normalize to decomposed form for better matching
