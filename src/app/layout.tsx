@@ -4,6 +4,7 @@ import "./globals.css";
 import { VoiceInputProvider } from "@/providers/Feature.povider";
 import VoiceInputButton from "@/components/custom/section/feature";
 import { Header } from "@/layouts/header";
+import { Footer } from "@/layouts/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +34,7 @@ export default function RootLayout({
         <VoiceInputProvider>
           <Header />
           {children}
+          <Footer />
           <VoiceInputButton />
         </VoiceInputProvider>
       </body>

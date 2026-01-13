@@ -1,8 +1,10 @@
 // services/normalize.ts
 export function normalize(text: string) {
+  if (!text) return ""
+  
   return text
     .toLowerCase()
-    .normalize("NFD") // Normalize to decomposed form for better matching
+    .normalize("NFD") 
     .replace(/[\u0300-\u036f]/g, "") // Remove diacritics
     .replace(/[?!.,;:]/g, "") // Remove punctuation
     .replace(/\s+/g, " ") // Normalize whitespace

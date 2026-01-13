@@ -23,10 +23,6 @@ const navLinks: NavLinkType[] = [
     label: "Бүтээгдэхүүн",
     href: "/products",
   },
-  {
-    label: "Холбоо барих",
-    href: "/contact",
-  },
 ]
 
 export function Header() {
@@ -42,7 +38,7 @@ export function Header() {
               href="/"
               className="text-xl font-semibold tracking-tight text-foreground hover:text-foreground/80 transition-colors"
             >
-              Silicon
+              BT solution
             </Link>
           </div>
 
@@ -63,9 +59,6 @@ export function Header() {
           <div className="hidden md:flex md:items-center md:gap-4">
             <Button variant="outline" size="sm" asChild>
               <Link href="/contact">Холбогдох</Link>
-            </Button>
-            <Button size="sm" asChild>
-              <Link href="/products">Эхлэх</Link>
             </Button>
           </div>
 
@@ -100,11 +93,6 @@ export function Header() {
                 <Button variant="outline" className="w-full bg-transparent" asChild>
                   <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
                     Холбогдох
-                  </Link>
-                </Button>
-                <Button className="w-full" asChild>
-                  <Link href="/products" onClick={() => setMobileMenuOpen(false)}>
-                    Эхлэх
                   </Link>
                 </Button>
               </div>

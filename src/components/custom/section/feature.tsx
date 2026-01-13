@@ -101,7 +101,7 @@ export default function VoiceInputButton() {
               aria-label="Voice input"
               className={cn(
                 "h-16 w-16 rounded-full",
-                "bg-primary text-white shadow-xl",
+                "bg-[#319799] text-white shadow-xl hover:bg-[#319799]/90",
                 isListening && "ring-4 ring-primary/40"
               )}
             >
