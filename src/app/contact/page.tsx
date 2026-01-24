@@ -149,10 +149,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Имэйл</h3>
                     <a
-                      href="mailto:contact@btsolution.co"
+                      href="mailto:contact@bt-solution.com"
                       className="text-muted-foreground hover:text-[#319799] transition-colors"
                     >
-                      contact@btsolution.co
+                      contact@bt-solution.com
                     </a>
                   </div>
                 </div>

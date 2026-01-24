@@ -67,7 +67,7 @@ export default function AboutPage() {
             <div className="group relative p-8 bg-background border border-border rounded-2xl hover:border-[#319799]/50 transition-all duration-300">
               <div className="absolute top-0 right-0 w-24 h-24 bg-[#319799]/5 rounded-bl-[100px] transition-all duration-300 group-hover:w-32 group-hover:h-32" />
               <div className="relative space-y-4">
-                <div className="text-5xl font-bold text-[#319799]/20">20+</div>
+                <div className="text-5xl font-bold text-[#319799]/20">20</div>
                 <h3 className="text-xl font-semibold">Жил туршлага</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm">
                   Манай компани нь бүх төрлийн аж ахуйн нэгж, бизнесийн байгууллагуудад зориулсан SILICON нэрийн иж бүрэн системийг хөгжүүлэн гаргаж, нэвтрүүлж ирлээ.
@@ -78,7 +78,7 @@ export default function AboutPage() {
             <div className="group relative p-8 bg-background border border-border rounded-2xl hover:border-[#319799]/50 transition-all duration-300">
               <div className="absolute top-0 right-0 w-24 h-24 bg-[#319799]/5 rounded-bl-[100px] transition-all duration-300 group-hover:w-32 group-hover:h-32" />
               <div className="relative space-y-4">
-                <div className="text-5xl font-bold text-[#319799]/20">100+</div>
+                <div className="text-5xl font-bold text-[#319799]/20">50+</div>
                 <h3 className="text-xl font-semibold">Байгууллага</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm">
                   Манай бүтээгдэхүүн үйлчилгээг төрийн болон төрийн бус байгууллага, аж ахуйн нэгжүүд нэвтрүүлэн ажиллаж байна.

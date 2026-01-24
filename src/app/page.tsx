@@ -7,12 +7,10 @@ import { useEffect, useState } from "react"
 export default function Page() {
   const [currentProduct, setCurrentProduct] = useState(0)
   const products = [
-    "SILICON-ERP",
     "Silicon-Accounting",
     "Silicon-Finance",
     "Silicon-HRM",
     "Silicon-AI Agent",
-    "Silicon-Project Management",
   ]
 
   useEffect(() => {
@@ -40,9 +38,8 @@ export default function Page() {
                 Бүтээгдэхүүн
               </div>
               <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance">
-                Иж бүрэн
                 <br />
-                <span className="text-[#319799]">SILICON</span> систем
+                <span className="text-[#319799]">SILICON ERP</span>
               </h2>
             </div>
 
@@ -89,7 +86,7 @@ export default function Page() {
               <span className="text-[#319799]">BT Solution</span> компанийн тухай
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-balance">
-              Аж ахуйн нэгж, байгууллагуудын санхүү, үйлдвэрлэл, нягтлан бодох бүртгэлийн үйл ажиллагааг автоматжуулах{" "}
+              Аж ахуйн нэгж, байгууллагуудын санхүү, хүний нөөц, нягтлан бодох бүртгэлийн үйл ажиллагааг автоматжуулах{" "}
               <strong className="text-[#319799] font-semibold">SILICON</strong> цогц систем
             </p>
           </div>
@@ -120,7 +117,7 @@ export default function Page() {
             <div className="group relative p-8 bg-background border border-border rounded-2xl hover:border-[#319799]/50 transition-all duration-300">
               <div className="absolute top-0 right-0 w-24 h-24 bg-[#319799]/5 rounded-bl-[100px] transition-all duration-300 group-hover:w-32 group-hover:h-32" />
               <div className="relative space-y-4">
-                <div className="text-5xl font-bold text-[#319799]/20">+</div>
+                <div className="text-5xl font-bold text-[#319799]/20">50+</div>
                 <h3 className="text-xl font-semibold">Байгууллага</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Манай бүтээгдэхүүн үйлчилгээг төрийн болон төрийн бус байгууллага, аж ахуйн нэгжүүд нэвтрүүлэн ажиллаж байна.

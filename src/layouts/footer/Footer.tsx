@@ -47,16 +47,16 @@ export function Footer() {
               <div className="flex items-start gap-3">
                 <Mail className="h-5 w-5 text-[#319799] flex-shrink-0 mt-0.5" />
                 <a
-                  href="mailto:contact@btsolution.co"
+                  href="mailto:contact@bt-solution.com"
                   className="hover:text-[#319799] transition-colors"
                 >
-                  contact@btsolution.co
+                  contact@bt-solution.com
                 </a>
               </div>
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-[#319799] flex-shrink-0 mt-0.5" />
                 <span>
-                  Happy Land Center, #6 Chingeltei District, 5th Khoroo,
+                  Jon bees 202, Bayangol District, 3th Khoroo,
                   Ulaanbaatar, Mongolia
                 </span>
               </div>
@@ -85,12 +85,6 @@ export function Footer() {
                 className="text-sm text-muted-foreground hover:text-[#319799] transition-colors"
               >
                 Бүтээгдэхүүн
-              </Link>
-              <Link
-                href="/contact"
-                className="text-sm text-muted-foreground hover:text-[#319799] transition-colors"
-              >
-                Холбоо барих
               </Link>
             </nav>
           </div>

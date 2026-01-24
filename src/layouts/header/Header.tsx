@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
@@ -23,6 +24,10 @@ const navLinks: NavLinkType[] = [
     label: "Бүтээгдэхүүн",
     href: "/products",
   },
+  {
+    label: "AI agent",
+    href: "/ai-agent",
+  },
 ]
 
 export function Header() {
@@ -34,11 +39,15 @@ export function Header() {
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link
-              href="/"
-              className="text-xl font-semibold tracking-tight text-foreground hover:text-foreground/80 transition-colors"
-            >
-              BT solution
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/BTSLogo.png"
+                alt="BT Solution Logo"
+                width={120}
+                height={40}
+                className="h-10 w-auto object-contain"
+                priority
+              />
             </Link>
           </div>
 
@@ -48,7 +57,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-foreground after:transition-all after:duration-300 hover:after:w-full"
+                className="text-sm font-medium text-foreground hover:text-foreground transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-foreground after:transition-all after:duration-300 hover:after:w-full"
               >
                 {link.label}
               </Link>
