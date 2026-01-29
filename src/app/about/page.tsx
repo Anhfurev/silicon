@@ -14,14 +14,17 @@ export default function AboutPage() {
         <div className="relative mx-auto max-w-7xl">
           <div className="text-center space-y-8">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance">
-              <span className="text-[#319799]">Бидний</span> тухай
+              <span className="text-[#319799]">БИДНИЙ</span> ТУХАЙ
             </h1>
             <div className="flex items-center justify-center">
               <div className="h-1 w-24 bg-[#319799] rounded-full" />
             </div>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-balance">
-              Аж ахуйн нэгж, байгууллагуудын санхүү, үйлдвэрлэл, нягтлан бодох бүртгэлийн үйл ажиллагааг автоматжуулах{" "}
-              <strong className="text-[#319799] font-semibold">SILICON</strong> цогц систем
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
+              Бид бизнесийн байгууллагын онцлогт тохирсон мэдээллийн технологийн
+              <strong className="text-[#319799] font-semibold">
+                {" "}цогц шийдлийг
+              </strong>{" "}
+              нэвтрүүлж, цахим шилжилтийг дэмжсэн иж бүрэн үйлчилгээ үзүүлнэ.
             </p>
           </div>
         </div>
@@ -33,20 +36,30 @@ export default function AboutPage() {
           <div className="prose prose-lg max-w-none space-y-6">
             <div className="space-y-6 text-muted-foreground leading-relaxed">
               <p className="text-lg font-semibold text-foreground">
-                <strong>&ldquo;Би Ти Солюшн&rdquo; ХХК</strong> компани нь 2005 онд үүсгэн байгуулагдсан бөгөөд 20 гаруй жил үйл ажиллагаа явуулж байна.
+                “Би Ти Солюшн” ХХК компани нь 2009 онд үүсгэн байгуулагдан,
+                15 гаруй жил тогтвортой үйл ажиллагаа явуулж байна.
               </p>
 
               <p className="text-base leading-relaxed">
-                Манай компани нь бүх төрлийн аж ахуйн нэгж, бизнесийн байгууллагуудад зориулсан{" "}
-                <strong className="text-[#319799]">SILICON</strong> нэрийн иж бүрэн системийг хөгжүүлэн гаргаж, нэвтрүүлж ирлээ. Манай бүтээгдэхүүн үйлчилгээг төрийн болон төрийн бус байгууллага, аж ахуйн нэгжүүд нэвтрүүлэн ажиллаж байна.
+                Бид бүх төрлийн аж ахуйн нэгж, байгууллагуудын санхүүгийн хяналт,
+                хүний нөөц, цалин хөлс, үйлдвэрлэл, нягтлан бодох бүртгэлийн
+                үйл ажиллагааг автоматжуулах{" "}
+                <strong className="text-[#319799]">SILICON ERP</strong>{" "}
+                цогц системийг боловсруулан амжилттай нэвтрүүлэн ажиллаж байна.
               </p>
 
               <p className="text-base leading-relaxed">
-                Манай компани хөгжүүлэн гаргасан программ хангамжуудыг өдөр тутмын үйл ажиллагаандаа ашигласнаар нягтлан бодох бүртгэлийн болон удирдлагын үйл ажиллагааг автоматжуулж, санхүүгийн үйлдвэрлэлийн үйл ажиллагааны хяналтыг сайжруулах давуу талтай болох юм.
+                <strong className="text-[#319799]">SILICON ERP</strong>{" "}
+                системийн модулиуд нь бие даан болон хоорондоо уялдан ажиллах
+                боломжтой бөгөөд байгууллагын онцлогт тохируулан уян хатан
+                байдлаар ашиглагдана.
               </p>
 
               <p className="text-base leading-relaxed">
-                <strong className="text-[#319799]">SILICON</strong> цогц систем нь байгууллагын санхүүгийн төлөвлөлт, орлого, зарлагын зарцуулалт, ба гүйцэтгэл, бусад үйл ажиллагаанд тавих удирдлагын хяналтыг хэрэгжүүлэх боломж олгодог.
+                Манай системийг хэрэглэснээр мөнгөн урсгалын төлөвлөлт,
+                гүйцэтгэл, бараа материал, үндсэн хөрөнгө, авлага,
+                өглөгийн бүртгэл, орлого зардлын хяналтыг
+                бүрэн автоматжуулах боломж бүрдэнэ.
               </p>
             </div>
           </div>
@@ -56,10 +69,10 @@ export default function AboutPage() {
             <div className="group relative p-8 bg-background border border-border rounded-2xl hover:border-[#319799]/50 transition-all duration-300">
               <div className="absolute top-0 right-0 w-24 h-24 bg-[#319799]/5 rounded-bl-[100px] transition-all duration-300 group-hover:w-32 group-hover:h-32" />
               <div className="relative space-y-4">
-                <div className="text-5xl font-bold text-[#319799]/20">2005</div>
+                <div className="text-5xl font-bold text-[#319799]/20">2009</div>
                 <h3 className="text-xl font-semibold">Үүсгэн байгуулагдсан</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm">
-                  &ldquo;Би Ти Солюшн&rdquo; ХХК компани нь 2005 онд үүсгэн байгуулагдсан бөгөөд 20 гаруй жил үйл ажиллагаа явуулж байна.
+                  “Би Ти Солюшн” ХХК компани нь 2009 онд үүсгэн байгуулагдсан.
                 </p>
               </div>
             </div>
@@ -67,10 +80,10 @@ export default function AboutPage() {
             <div className="group relative p-8 bg-background border border-border rounded-2xl hover:border-[#319799]/50 transition-all duration-300">
               <div className="absolute top-0 right-0 w-24 h-24 bg-[#319799]/5 rounded-bl-[100px] transition-all duration-300 group-hover:w-32 group-hover:h-32" />
               <div className="relative space-y-4">
-                <div className="text-5xl font-bold text-[#319799]/20">20</div>
+                <div className="text-5xl font-bold text-[#319799]/20">15+</div>
                 <h3 className="text-xl font-semibold">Жил туршлага</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm">
-                  Манай компани нь бүх төрлийн аж ахуйн нэгж, бизнесийн байгууллагуудад зориулсан SILICON нэрийн иж бүрэн системийг хөгжүүлэн гаргаж, нэвтрүүлж ирлээ.
+                  ERP систем хөгжүүлэлт, нэвтрүүлэлтийн арвин туршлагатай.
                 </p>
               </div>
             </div>
@@ -78,10 +91,11 @@ export default function AboutPage() {
             <div className="group relative p-8 bg-background border border-border rounded-2xl hover:border-[#319799]/50 transition-all duration-300">
               <div className="absolute top-0 right-0 w-24 h-24 bg-[#319799]/5 rounded-bl-[100px] transition-all duration-300 group-hover:w-32 group-hover:h-32" />
               <div className="relative space-y-4">
-                <div className="text-5xl font-bold text-[#319799]/20">50+</div>
-                <h3 className="text-xl font-semibold">Байгууллага</h3>
+                <div className="text-5xl font-bold text-[#319799]/20">ERP</div>
+                <h3 className="text-xl font-semibold">Цогц шийдэл</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm">
-                  Манай бүтээгдэхүүн үйлчилгээг төрийн болон төрийн бус байгууллага, аж ахуйн нэгжүүд нэвтрүүлэн ажиллаж байна.
+                  Санхүү, хүний нөөц, худалдан авалт, мөнгөн урсгалын
+                  нэгдсэн удирдлагын систем.
                 </p>
               </div>
             </div>
@@ -91,4 +105,3 @@ export default function AboutPage() {
     </div>
   )
 }
-
