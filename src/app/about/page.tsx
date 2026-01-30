@@ -35,7 +35,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-4xl">
           <div className="prose prose-lg max-w-none space-y-6">
             <div className="space-y-6 text-muted-foreground leading-relaxed">
-              <p className="text-lg font-semibold text-foreground">
+              <p className="text-lg font-normal text-foreground">
                 “Би Ти Солюшн” ХХК компани нь 2009 онд үүсгэн байгуулагдан,
                 15 гаруй жил тогтвортой үйл ажиллагаа явуулж байна.
               </p>

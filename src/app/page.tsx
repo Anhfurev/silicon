@@ -1,24 +1,24 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { useEffect, useState } from "react"
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Page() {
-  const [currentProduct, setCurrentProduct] = useState(0)
+  const [currentProduct, setCurrentProduct] = useState(0);
   const products = [
     "Silicon-Accounting",
     "Silicon-Finance",
     "Silicon-HRM",
     "Silicon-AI Agent",
-  ]
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentProduct((prev) => (prev + 1) % products.length)
-    }, 2000)
-    return () => clearInterval(interval)
-  }, [products.length])
+      setCurrentProduct((prev) => (prev + 1) % products.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, [products.length]);
 
   return (
     <div className="min-h-screen">
@@ -51,12 +51,20 @@ export default function Page() {
                     className={`absolute inset-0 flex items-center justify-center transition-all duration-700 ${
                       index === currentProduct
                         ? "opacity-100 translate-y-0 scale-100"
-                        : index === (currentProduct - 1 + products.length) % products.length
+                        : index ===
+                            (currentProduct - 1 + products.length) %
+                              products.length
                           ? "opacity-0 -translate-y-8 scale-95"
                           : "opacity-0 translate-y-8 scale-95"
                     }`}
                   >
-                    <span className={index === 0 ? "text-[#319799]" : "text-foreground"}>{product}</span>
+                    <span
+                      className={
+                        index === 0 ? "text-[#319799]" : "text-foreground"
+                      }
+                    >
+                      {product}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -68,7 +76,9 @@ export default function Page() {
                   key={index}
                   onClick={() => setCurrentProduct(index)}
                   className={`h-2 rounded-full transition-all duration-300 ${
-                    index === currentProduct ? "w-12 bg-[#319799]" : "w-2 bg-border hover:bg-border/70"
+                    index === currentProduct
+                      ? "w-12 bg-[#319799]"
+                      : "w-2 bg-border hover:bg-border/70"
                   }`}
                   aria-label={`Go to product ${index + 1}`}
                 />
@@ -83,22 +93,23 @@ export default function Page() {
         <div className="mx-auto max-w-7xl">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-              <span className="text-[#319799]">BT Solution</span> компанийн тухай
+              <span className="text-[#319799]">BT Solution</span> компанийн
+              тухай
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-balance">
-              Аж ахуйн нэгж, байгууллагуудын санхүү, хүний нөөц, нягтлан бодох бүртгэлийн үйл ажиллагааг автоматжуулах{" "}
-              <strong className="text-[#319799] font-semibold">SILICON</strong> цогц систем
+              “Би Ти Солюшн” ХХК компани нь 2009 онд үүсгэн байгуулагдан, 15
+              гаруй жил тогтвортой үйл ажиллагаа явуулж байна.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="group relative p-8 bg-background border border-border rounded-2xl hover:border-[#319799]/50 transition-all duration-300">
               <div className="absolute top-0 right-0 w-24 h-24 bg-[#319799]/5 rounded-bl-[100px] transition-all duration-300 group-hover:w-32 group-hover:h-32" />
               <div className="relative space-y-4">
-                <div className="text-5xl font-bold text-[#319799]/20">2005</div>
+                <div className="text-5xl font-bold text-[#319799]/20">2009</div>
                 <h3 className="text-xl font-semibold">Үүсгэн байгуулагдсан</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  &ldquo;Би Ти Солюшн&rdquo; ХХК компани нь 2005 онд үүсгэн байгуулагдсан бөгөөд 20 гаруй жил үйл ажиллагаа явуулж байна.
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  “Би Ти Солюшн” ХХК компани нь 2009 онд үүсгэн байгуулагдсан.
                 </p>
               </div>
             </div>
@@ -106,10 +117,10 @@ export default function Page() {
             <div className="group relative p-8 bg-background border border-border rounded-2xl hover:border-[#319799]/50 transition-all duration-300">
               <div className="absolute top-0 right-0 w-24 h-24 bg-[#319799]/5 rounded-bl-[100px] transition-all duration-300 group-hover:w-32 group-hover:h-32" />
               <div className="relative space-y-4">
-                <div className="text-5xl font-bold text-[#319799]/20">20</div>
+                <div className="text-5xl font-bold text-[#319799]/20">15+</div>
                 <h3 className="text-xl font-semibold">Жил туршлага</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Манай компани нь бүх төрлийн аж ахуйн нэгж, бизнесийн байгууллагуудад зориулсан SILICON нэрийн иж бүрэн системийг хөгжүүлэн гаргаж, нэвтрүүлж ирлээ.
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  ERP систем хөгжүүлэлт, нэвтрүүлэлтийн арвин туршлагатай.
                 </p>
               </div>
             </div>
@@ -117,10 +128,11 @@ export default function Page() {
             <div className="group relative p-8 bg-background border border-border rounded-2xl hover:border-[#319799]/50 transition-all duration-300">
               <div className="absolute top-0 right-0 w-24 h-24 bg-[#319799]/5 rounded-bl-[100px] transition-all duration-300 group-hover:w-32 group-hover:h-32" />
               <div className="relative space-y-4">
-                <div className="text-5xl font-bold text-[#319799]/20">50+</div>
-                <h3 className="text-xl font-semibold">Байгууллага</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Манай бүтээгдэхүүн үйлчилгээг төрийн болон төрийн бус байгууллага, аж ахуйн нэгжүүд нэвтрүүлэн ажиллаж байна.
+                <div className="text-5xl font-bold text-[#319799]/20">ERP</div>
+                <h3 className="text-xl font-semibold">Цогц шийдэл</h3>
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  Санхүү, хүний нөөц, худалдан авалт, мөнгөн урсгалын нэгдсэн
+                  удирдлагын систем.
                 </p>
               </div>
             </div>
@@ -132,7 +144,8 @@ export default function Page() {
         <div className="mx-auto max-w-7xl">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-              <span className="text-[#319799]">SILICON</span> системийн давуу тал
+              <span className="text-[#319799]">SILICON</span> системийн давуу
+              тал
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-balance">
               Байгууллагын үйл ажиллагааг бүхэлд нь хамарсан иж бүрэн шийдэл
@@ -146,7 +159,8 @@ export default function Page() {
                 <div className="text-5xl font-bold text-[#319799]/20">01</div>
                 <h3 className="text-xl font-semibold">Санхүүгийн төлөвлөлт</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Байгууллагын санхүүгийн төлөвлөлтийг боловсронгуй болгож, урьдчилан таамаглах боломж олгоно
+                  Байгууллагын санхүүгийн төлөвлөлтийг боловсронгуй болгож,
+                  урьдчилан таамаглах боломж олгоно
                 </p>
               </div>
             </div>
@@ -155,9 +169,12 @@ export default function Page() {
               <div className="absolute top-0 right-0 w-24 h-24 bg-[#319799]/5 rounded-bl-[100px] transition-all duration-300 group-hover:w-32 group-hover:h-32" />
               <div className="relative space-y-4">
                 <div className="text-5xl font-bold text-[#319799]/20">02</div>
-                <h3 className="text-xl font-semibold">Орлого зарлагын хяналт</h3>
+                <h3 className="text-xl font-semibold">
+                  Орлого зарлагын хяналт
+                </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Орлого зарлагын зарцуулалтыг бодитой цагт хянах, тайлан гаргах функц
+                  Орлого зарлагын зарцуулалтыг бодитой цагт хянах, тайлан гаргах
+                  функц
                 </p>
               </div>
             </div>
@@ -168,7 +185,8 @@ export default function Page() {
                 <div className="text-5xl font-bold text-[#319799]/20">03</div>
                 <h3 className="text-xl font-semibold">Гүйцэтгэлийн үнэлгээ</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Бусад үйл ажиллагааны гүйцэтгэлд тавих удирдлагын хяналтыг хэрэгжүүлнэ
+                  Бусад үйл ажиллагааны гүйцэтгэлд тавих удирдлагын хяналтыг
+                  хэрэгжүүлнэ
                 </p>
               </div>
             </div>
@@ -179,7 +197,8 @@ export default function Page() {
                 <div className="text-5xl font-bold text-[#319799]/20">04</div>
                 <h3 className="text-xl font-semibold">Нягтлан бодох бүртгэл</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Нягтлан бодох бүртгэлийн үйл ажиллагааг бүрэн автоматжуулсан систем
+                  Нягтлан бодох бүртгэлийн үйл ажиллагааг бүрэн автоматжуулсан
+                  систем
                 </p>
               </div>
             </div>
@@ -188,9 +207,12 @@ export default function Page() {
               <div className="absolute top-0 right-0 w-24 h-24 bg-[#319799]/5 rounded-bl-[100px] transition-all duration-300 group-hover:w-32 group-hover:h-32" />
               <div className="relative space-y-4">
                 <div className="text-5xl font-bold text-[#319799]/20">05</div>
-                <h3 className="text-xl font-semibold">Үйлдвэрлэлийн удирдлага</h3>
+                <h3 className="text-xl font-semibold">
+                  Үйлдвэрлэлийн удирдлага
+                </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Үйлдвэрлэлийн процессыг хянах, оновчтой болгох боломжийг олгоно
+                  Үйлдвэрлэлийн процессыг хянах, оновчтой болгох боломжийг
+                  олгоно
                 </p>
               </div>
             </div>
@@ -201,7 +223,8 @@ export default function Page() {
                 <div className="text-5xl font-bold text-[#319799]/20">06</div>
                 <h3 className="text-xl font-semibold">Тайлан мэдээлэл</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Олон төрлийн удирдлагын тайлан, аналитик мэдээлэл гаргах систем
+                  Олон төрлийн удирдлагын тайлан, аналитик мэдээлэл гаргах
+                  систем
                 </p>
               </div>
             </div>
@@ -219,7 +242,8 @@ export default function Page() {
                 Бизнесээ шинэ түвшинд гаргахад бэлэн үү?
               </h2>
               <p className="text-xl text-white/90 text-pretty leading-relaxed">
-                Манай мэргэжилтнүүд таны байгууллагын онцлогт тохирсон шийдлийг санал болгоход бэлэн байна.
+                Манай мэргэжилтнүүд таны байгууллагын онцлогт тохирсон шийдлийг
+                санал болгоход бэлэн байна.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
@@ -244,5 +268,5 @@ export default function Page() {
         </div>
       </section>
     </div>
-  )
+  );
 }
