@@ -242,8 +242,7 @@ export default function Page() {
                 Бизнесээ шинэ түвшинд гаргахад бэлэн үү?
               </h2>
               <p className="text-xl text-white/90 text-pretty leading-relaxed">
-                Манай мэргэжилтнүүд таны байгууллагын онцлогт тохирсон шийдлийг
-                санал болгоход бэлэн байна.
+                Та цахим шилжилтээ эхлүүлээрэй. Бид танд туслахад бэлэн байна.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
@@ -260,7 +259,7 @@ export default function Page() {
                   className="text-base border-white/30 text-white hover:bg-white/10 bg-transparent"
                   asChild
                 >
-                  <Link href="/products">Бүтээгдэхүүн танилцах</Link>
+                  <Link href="/products">Бүтээгдэхүүнтэй танилцах</Link>
                 </Button>
               </div>
             </div>
