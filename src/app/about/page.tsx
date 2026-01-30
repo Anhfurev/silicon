@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 export default function AboutPage() {
   return (
@@ -22,7 +22,8 @@ export default function AboutPage() {
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
               Бид бизнесийн байгууллагын онцлогт тохирсон мэдээллийн технологийн
               <strong className="text-[#319799] font-semibold">
-                {" "}цогц шийдлийг
+                {" "}
+                цогц шийдлийг
               </strong>{" "}
               нэвтрүүлж, цахим шилжилтийг дэмжсэн иж бүрэн үйлчилгээ үзүүлнэ.
             </p>
@@ -34,32 +35,26 @@ export default function AboutPage() {
       <section className="py-24 px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
           <div className="prose prose-lg max-w-none space-y-6">
-            <div className="space-y-6 text-muted-foreground leading-relaxed">
-              <p className="text-lg font-normal text-foreground">
-                “Би Ти Солюшн” ХХК компани нь 2009 онд үүсгэн байгуулагдан,
-                15 гаруй жил тогтвортой үйл ажиллагаа явуулж байна.
+            <div className="text-muted-foreground leading-relaxed">
+              <p className="text-base leading-relaxed">
+                “Би Ти Солюшн” ХХК компани нь 2009 онд үүсгэн байгуулагдан, 15
+                гаруй жил тогтвортой үйл ажиллагаа явуулж байна.
               </p>
 
-              <p className="text-base leading-relaxed">
-                Бид бүх төрлийн аж ахуйн нэгж, байгууллагуудын санхүүгийн хяналт,
-                хүний нөөц, цалин хөлс, үйлдвэрлэл, нягтлан бодох бүртгэлийн
-                үйл ажиллагааг автоматжуулах{" "}
-                <strong className="text-[#319799]">SILICON ERP</strong>{" "}
-                цогц системийг боловсруулан амжилттай нэвтрүүлэн ажиллаж байна.
-              </p>
-
-              <p className="text-base leading-relaxed">
-                <strong className="text-[#319799]">SILICON ERP</strong>{" "}
+              <p className="text-base leading-relaxed text-justify">
+                Бид бүх төрлийн аж ахуйн нэгж, байгууллагуудын санхүүгийн
+                хяналт, хүний нөөц, цалин хөлс, үйлдвэрлэл, нягтлан бодох
+                бүртгэлийн үйл ажиллагааг автоматжуулах
+                <strong className="text-[#319799]">SILICON ERP</strong> цогц
+                системийг боловсруулан амжилттай нэвтрүүлэн ажиллаж байна.
+                <strong className="text-[#319799]">SILICON ERP</strong>
                 системийн модулиуд нь бие даан болон хоорондоо уялдан ажиллах
                 боломжтой бөгөөд байгууллагын онцлогт тохируулан уян хатан
                 байдлаар ашиглагдана.
-              </p>
-
-              <p className="text-base leading-relaxed">
                 Манай системийг хэрэглэснээр мөнгөн урсгалын төлөвлөлт,
-                гүйцэтгэл, бараа материал, үндсэн хөрөнгө, авлага,
-                өглөгийн бүртгэл, орлого зардлын хяналтыг
-                бүрэн автоматжуулах боломж бүрдэнэ.
+                гүйцэтгэл, бараа материал, үндсэн хөрөнгө, авлага, өглөгийн
+                бүртгэл, орлого зардлын хяналтыг бүрэн автоматжуулах боломж
+                бүрдэнэ.
               </p>
             </div>
           </div>
@@ -94,8 +89,8 @@ export default function AboutPage() {
                 <div className="text-5xl font-bold text-[#319799]/20">ERP</div>
                 <h3 className="text-xl font-semibold">Цогц шийдэл</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm">
-                  Санхүү, хүний нөөц, худалдан авалт, мөнгөн урсгалын
-                  нэгдсэн удирдлагын систем.
+                  Санхүү, хүний нөөц, худалдан авалт, мөнгөн урсгалын нэгдсэн
+                  удирдлагын систем.
                 </p>
               </div>
             </div>
@@ -103,5 +98,5 @@ export default function AboutPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }
