@@ -239,7 +239,7 @@ export default function Page() {
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-size-[32px_32px]" />
             <div className="relative max-w-3xl space-y-8">
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white text-balance">
-                Бизнесээ шинэ түвшинд гаргахад бэлэн үү?
+                AI-д суурилсан шинэлэг шийдэл
               </h2>
               <p className="text-xl text-white/90 text-pretty leading-relaxed">
                 Та цахим шилжилтээ эхлүүлээрэй. Бид танд туслахад бэлэн байна.
