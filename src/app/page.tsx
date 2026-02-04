@@ -145,8 +145,7 @@ export default function Page() {
         <div className="mx-auto max-w-7xl">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-              <span className="text-[#319799]">SILICON</span> системийн давуу
-              тал
+              <span className="text-[#319799]">SILICON</span> ERP+AI СИСТЕМ
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-balance">
               Байгууллагын үйл ажиллагааг бүхэлд нь хамарсан иж бүрэн шийдэл

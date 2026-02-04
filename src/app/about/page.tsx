@@ -20,7 +20,7 @@ export default function AboutPage() {
               <div className="h-1 w-24 bg-[#319799] rounded-full" />
             </div>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
-              Бид бизнесийн байгууллагын онцлогт тохирсон хиймжл оюун ухааны
+              Бид бизнесийн байгууллагын онцлогт тохирсон хиймэл оюун ухааны
               <strong className="text-[#319799] font-semibold">
                 {" "}
                 цогц шийдлийг
@@ -37,7 +37,7 @@ export default function AboutPage() {
           <div className="prose prose-lg max-w-none space-y-6">
             <div className="text-muted-foreground leading-relaxed">
               <p className="text-base leading-relaxed">
-                “Би Ти Солюшн” ХХК компани нь 2009 онд үүсгэн байгуулагдан, 15
+                Би Ти Солюшн” ХХК компани нь 2009 онд үүсгэн байгуулагдан, 15
                 гаруй жил тогтвортой үйл ажиллагаа явуулж байна.
               </p>
 
@@ -45,9 +45,9 @@ export default function AboutPage() {
                 Бид бүх төрлийн аж ахуйн нэгж, байгууллагуудын санхүүгийн
                 хяналт, хүний нөөц, цалин хөлс, үйлдвэрлэл, нягтлан бодох
                 бүртгэлийн үйл ажиллагааг автоматжуулах
-                <strong className="text-[#319799]">SILICON ERP</strong> цогц
+                <strong className="text-[#319799]"> SILICON ERP + AI</strong> цогц
                 системийг боловсруулан амжилттай нэвтрүүлэн ажиллаж байна.
-                <strong className="text-[#319799]">SILICON ERP</strong>
+                <strong className="text-[#319799]"> SILICON ERP + AI </strong>
                 системийн модулиуд нь бие даан болон хоорондоо уялдан ажиллах
                 боломжтой бөгөөд байгууллагын онцлогт тохируулан уян хатан
                 байдлаар ашиглагдана.
