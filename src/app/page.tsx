@@ -11,6 +11,7 @@ export default function Page() {
     "Silicon-Finance",
     "Silicon-HRM",
     "Silicon-AI Agent",
+    "Silicon-Procurement",
   ];
 
   useEffect(() => {
@@ -39,7 +40,7 @@ export default function Page() {
               </div>
               <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance">
                 <br />
-                <span className="text-[#319799]">SILICON ERP</span>
+                <span className="text-[#319799]">SILICON ERP+AI</span>
               </h2>
             </div>
 
@@ -93,7 +94,7 @@ export default function Page() {
         <div className="mx-auto max-w-7xl">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-              <span className="text-[#319799]">BT Solution</span> компанийн
+              <span className="text-[#319799]">BT Solution LLC</span> компанийн
               тухай
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-balance">
@@ -128,7 +129,7 @@ export default function Page() {
             <div className="group relative p-8 bg-background border border-border rounded-2xl hover:border-[#319799]/50 transition-all duration-300">
               <div className="absolute top-0 right-0 w-24 h-24 bg-[#319799]/5 rounded-bl-[100px] transition-all duration-300 group-hover:w-32 group-hover:h-32" />
               <div className="relative space-y-4">
-                <div className="text-5xl font-bold text-[#319799]/20">ERP</div>
+                <div className="text-5xl font-bold text-[#319799]/20">ERP+AI</div>
                 <h3 className="text-xl font-semibold">Цогц шийдэл</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm">
                   Санхүү, хүний нөөц, худалдан авалт, мөнгөн урсгалын нэгдсэн
@@ -183,10 +184,9 @@ export default function Page() {
               <div className="absolute top-0 right-0 w-24 h-24 bg-[#319799]/5 rounded-bl-[100px] transition-all duration-300 group-hover:w-32 group-hover:h-32" />
               <div className="relative space-y-4">
                 <div className="text-5xl font-bold text-[#319799]/20">03</div>
-                <h3 className="text-xl font-semibold">Гүйцэтгэлийн үнэлгээ</h3>
+                <h3 className="text-xl font-semibold">Гэрээний удирдлага</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Бусад үйл ажиллагааны гүйцэтгэлд тавих удирдлагын хяналтыг
-                  хэрэгжүүлнэ
+                  Худалдан авалт болон борлуулалтын гэрээг бүртгэж, хянах боломж олгоно
                 </p>
               </div>
             </div>
@@ -208,11 +208,10 @@ export default function Page() {
               <div className="relative space-y-4">
                 <div className="text-5xl font-bold text-[#319799]/20">05</div>
                 <h3 className="text-xl font-semibold">
-                  Үйлдвэрлэлийн удирдлага
+                  Хүний нөөц
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Үйлдвэрлэлийн процессыг хянах, оновчтой болгох боломжийг
-                  олгоно
+                  Хүний нөөцийн бүртгэл, шилжилт хөдөлгөөнийг тайлагнах систем
                 </p>
               </div>
             </div>
@@ -221,10 +220,9 @@ export default function Page() {
               <div className="absolute top-0 right-0 w-24 h-24 bg-[#319799]/5 rounded-bl-[100px] transition-all duration-300 group-hover:w-32 group-hover:h-32" />
               <div className="relative space-y-4">
                 <div className="text-5xl font-bold text-[#319799]/20">06</div>
-                <h3 className="text-xl font-semibold">Тайлан мэдээлэл</h3>
+                <h3 className="text-xl font-semibold">Худалдан авалт</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Олон төрлийн удирдлагын тайлан, аналитик мэдээлэл гаргах
-                  систем
+                  Худалдан авалтын захиалга, харьцуулалт, гүйцэтгэл тайлан
                 </p>
               </div>
             </div>
@@ -239,7 +237,7 @@ export default function Page() {
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-size-[32px_32px]" />
             <div className="relative max-w-3xl space-y-8">
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white text-balance">
-                AI-д суурилсан шинэлэг шийдэл
+                Хиймэл оюун ухаант цахим шилжилтийн цогц шийдэл
               </h2>
               <p className="text-xl text-white/90 text-pretty leading-relaxed">
                 Та цахим шилжилтээ эхлүүлээрэй. Бид танд туслахад бэлэн байна.

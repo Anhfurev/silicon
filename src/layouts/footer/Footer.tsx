@@ -36,7 +36,7 @@ export function Footer() {
             <div className="h-0.5 w-12 bg-[#319799] rounded-full" />
             <div className="space-y-3 text-sm text-muted-foreground">
               <div className="flex items-start gap-3">
-                <Phone className="h-5 w-5 text-[#319799] flex-shrink-0 mt-0.5" />
+                <Phone className="h-5 w-5 text-[#319799] shrink-0 mt-0.5" />
                 <a
                   href="tel:+97676011124"
                   className="hover:text-[#319799] transition-colors"
@@ -45,7 +45,7 @@ export function Footer() {
                 </a>
               </div>
               <div className="flex items-start gap-3">
-                <Mail className="h-5 w-5 text-[#319799] flex-shrink-0 mt-0.5" />
+                <Mail className="h-5 w-5 text-[#319799] shrink-0 mt-0.5" />
                 <a
                   href="mailto:contact@bt-solution.com"
                   className="hover:text-[#319799] transition-colors"
@@ -54,10 +54,10 @@ export function Footer() {
                 </a>
               </div>
               <div className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-[#319799] flex-shrink-0 mt-0.5" />
+                <MapPin className="h-5 w-5 text-[#319799] shrink-0 mt-0.5" />
                 <span>
-                  Jon bees 202, Bayangol District, 3th Khoroo,
-                  Ulaanbaatar, Mongolia
+                  Жон бээс төв 202 тоот, Баянгол дүүрэг, 3-р хороо,
+                  Улаанбаатар хот, Монгол улс
                 </span>
               </div>
             </div>

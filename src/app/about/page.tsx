@@ -20,7 +20,7 @@ export default function AboutPage() {
               <div className="h-1 w-24 bg-[#319799] rounded-full" />
             </div>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
-              Бид бизнесийн байгууллагын онцлогт тохирсон мэдээллийн технологийн
+              Бид бизнесийн байгууллагын онцлогт тохирсон хиймжл оюун ухааны
               <strong className="text-[#319799] font-semibold">
                 {" "}
                 цогц шийдлийг
@@ -86,7 +86,7 @@ export default function AboutPage() {
             <div className="group relative p-8 bg-background border border-border rounded-2xl hover:border-[#319799]/50 transition-all duration-300">
               <div className="absolute top-0 right-0 w-24 h-24 bg-[#319799]/5 rounded-bl-[100px] transition-all duration-300 group-hover:w-32 group-hover:h-32" />
               <div className="relative space-y-4">
-                <div className="text-5xl font-bold text-[#319799]/20">ERP</div>
+                <div className="text-5xl font-bold text-[#319799]/20">ERP+AI</div>
                 <h3 className="text-xl font-semibold">Цогц шийдэл</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm">
                   Санхүү, хүний нөөц, худалдан авалт, мөнгөн урсгалын нэгдсэн

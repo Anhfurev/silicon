@@ -35,7 +35,7 @@ const products = [
     features: ["Хүний нөөц", "Цалин хөлс", "Тайлан"],
   },
   {
-    title: "Мөнгөн урсгалын шинжилгээ",
+    title: "Мөнгөн урсгалын төлөвлөлт",
     description:
       "Мөнгөний орох, гарах урсгалын төлөвлөлтийг гэрээтэй уялдуулан хянах систем бөгөөд төлөвлөлт, гүйцэтгэлийг харьцуулан шинжлэх боломж олгоно.",
     features: [
@@ -48,13 +48,9 @@ const products = [
     title: "Цалин хөлсний систем",
     description:
       "Цалингийн тооцооллыг хийх зориулалттай. Байгууллагын онцлогт тохирсон загварыг өөрчлөн нийцүүлэх боломжтой.",
-    features: [
-      "Цагийн бүртгэл",
-      "Цалин тооцоолол",
-      "Цалин хөлсний тайлан",
-    ],
+    features: ["Цагийн бүртгэл", "Цалин тооцоолол", "Цалин хөлсний тайлан"],
   },
-    {
+  {
     title: "Даатгалын систем",
     description:
       "Даатгал болон брокерийн үндсэн үйл ажиллагааг автоматжуулсан  цогц систем.",
@@ -82,13 +78,13 @@ export default function ProductsPage() {
         <div className="relative mx-auto max-w-7xl">
           <div className="text-center space-y-8">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance text-slate-500">
-              Бүтээгдэхүүн, <span className="text-[#319799]">үйлчилгээ</span>
+              ERP + <span className="text-[#319799]">AI</span>
             </h1>
             <div className="flex items-center justify-center">
               <div className="h-1 w-24 bg-[#319799] rounded-full" />
             </div>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-balance">
-              Байгууллагын үйл ажиллагааг бүхэлд нь хамарсан иж бүрэн шийдлүүд
+              Цахим шилжилтийн цогц шийдэл
             </p>
           </div>
         </div>

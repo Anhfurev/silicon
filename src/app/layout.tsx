@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { VoiceInputProvider } from "@/providers/Feature.povider";
-import VoiceInputButton from "@/components/custom/section/feature";
+// import VoiceInputButton from "@/components/custom/section/feature";
 import { Header } from "@/layouts/header";
 import { Footer } from "@/layouts/footer";
 
@@ -40,7 +40,7 @@ export default function RootLayout({
           <Header />
           {children}
           <Footer />
-          <VoiceInputButton />
+          {/* <VoiceInputButton /> */}
         </VoiceInputProvider>
       </body>
     </html>
