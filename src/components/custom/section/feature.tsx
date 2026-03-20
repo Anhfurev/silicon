@@ -1,26 +1,26 @@
-"use client"
+"use client";
 
-import { Mic, MicOff } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
+import { Mic, MicOff } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip"
-import { useEffect, useRef, useState } from "react"
+} from "@/components/ui/tooltip";
+import { useEffect, useRef, useState } from "react";
 
-import { useVoiceInput } from "@/providers/Feature.povider"
-import { matchQuestion } from "@/utils/Question.matcher"
-import { playAudio } from "@/utils/Audio.player"
+import { useVoiceInput } from "@/providers/Feature.povider";
+import { matchQuestion } from "@/utils/Question.matcher";
+import { playAudio } from "@/utils/Audio.player";
 
 export default function VoiceInputButton() {
   const { isListening, transcript, startListening, stopListening, noSpeech } =
-    useVoiceInput()
-  const prevListeningRef = useRef(false)
-  const processedTranscriptRef = useRef("")
-  const [displayAnswer, setDisplayAnswer] = useState<string | null>(null)
+    useVoiceInput();
+  const prevListeningRef = useRef(false);
+  const processedTranscriptRef = useRef("");
+  const [displayAnswer, setDisplayAnswer] = useState<string | null>(null);
 
   // Process transcript when listening stops
   useEffect(() => {
@@ -28,67 +28,67 @@ export default function VoiceInputButton() {
     if (!isListening && prevListeningRef.current) {
       // If we have a transcript, process it
       if (transcript && transcript !== processedTranscriptRef.current) {
-        processedTranscriptRef.current = transcript
-        
-        console.log("Processing transcript:", transcript)
-        const result = matchQuestion(transcript)
+        processedTranscriptRef.current = transcript;
+
+        console.log("Processing transcript:", transcript);
+        const result = matchQuestion(transcript);
 
         // Use setTimeout to avoid synchronous setState in effect
         setTimeout(() => {
           if (result) {
-            console.log("Match found:", result.question)
+            console.log("Match found:", result.question);
             if (result.audio_path) {
-              playAudio(result.audio_path)
-              setDisplayAnswer(null) // Clear answer if audio is playing
+              playAudio(result.audio_path);
+              setDisplayAnswer(null); // Clear answer if audio is playing
             } else {
-              console.log("No audio path for matched question")
+              console.log("No audio path for matched question");
               // Show answer in tooltip
-              setDisplayAnswer(result.answer)
+              setDisplayAnswer(result.answer);
               // Auto-hide answer after 10 seconds
               setTimeout(() => {
-                setDisplayAnswer(null)
-              }, 10000)
+                setDisplayAnswer(null);
+              }, 10000);
             }
           } else {
-            console.log("No match found for transcript:", transcript)
-            playAudio("audio/not-found.m4a")
-            setDisplayAnswer(null)
+            console.log("No match found for transcript:", transcript);
+            playAudio("audio/not-found.m4a");
+            setDisplayAnswer(null);
           }
-        }, 0)
+        }, 0);
       } else {
         // No transcript - this is normal for "no-speech" errors
         // Just reset the processed transcript ref silently
-        processedTranscriptRef.current = ""
+        processedTranscriptRef.current = "";
       }
     }
-    
-    prevListeningRef.current = isListening
-    
+
+    prevListeningRef.current = isListening;
+
     // Clear answer when starting to listen again
     if (isListening) {
       setTimeout(() => {
-        setDisplayAnswer(null)
-      }, 0)
+        setDisplayAnswer(null);
+      }, 0);
     }
-  }, [isListening, transcript])
+  }, [isListening, transcript]);
 
   const toggle = () => {
     if (isListening) {
-      stopListening()
+      stopListening();
     } else {
-      processedTranscriptRef.current = ""
-      setDisplayAnswer(null)
-      startListening()
+      processedTranscriptRef.current = "";
+      setDisplayAnswer(null);
+      startListening();
     }
-  }
+  };
 
   // Determine tooltip content and visibility
-  const tooltipOpen = isListening || displayAnswer !== null || noSpeech
-  const tooltipContent = isListening 
-    ? "Та ярина уу!" 
+  const tooltipOpen = isListening || displayAnswer !== null || noSpeech;
+  const tooltipContent = isListening
+    ? "Та ярина уу!"
     : noSpeech
-    ? "Яриа илрээгүй байна"
-    : displayAnswer || ""
+      ? "Яриа илрээгүй байна"
+      : displayAnswer || "";
 
   return (
     <TooltipProvider delayDuration={0}>
@@ -101,8 +101,8 @@ export default function VoiceInputButton() {
               aria-label="Voice input"
               className={cn(
                 "h-16 w-16 rounded-full",
-                "bg-[#319799] text-white shadow-xl hover:bg-[#319799]/90",
-                isListening && "ring-4 ring-primary/40"
+                "bg-[#0A0779] text-white shadow-xl hover:bg-[#0A0779]/90",
+                isListening && "ring-4 ring-primary/40",
               )}
             >
               {isListening ? <MicOff /> : <Mic />}
@@ -114,9 +114,9 @@ export default function VoiceInputButton() {
             align="center"
             className={cn(
               "bg-primary text-white px-3 py-1 text-xs font-semibold",
-              displayAnswer 
-                ? "max-w-md rounded-lg whitespace-normal" 
-                : "rounded-full"
+              displayAnswer
+                ? "max-w-md rounded-lg whitespace-normal"
+                : "rounded-full",
             )}
           >
             {tooltipContent}
@@ -124,5 +124,5 @@ export default function VoiceInputButton() {
         </Tooltip>
       </div>
     </TooltipProvider>
-  )
+  );
 }

@@ -13,7 +13,7 @@ export function Footer() {
             <h3 className="text-lg font-semibold text-foreground">
               Бидний тухай
             </h3>
-            <div className="h-0.5 w-12 bg-[#319799] rounded-full" />
+            <div className="h-0.5 w-12 bg-(--brand) rounded-full" />
             <p className="text-sm text-muted-foreground leading-relaxed">
               Бизнесээ шинэ түвшинд гаргахад бэлэн үү?
             </p>
@@ -21,7 +21,7 @@ export function Footer() {
               Утас:{" "}
               <a
                 href="tel:+97676011124"
-                className="text-[#319799] hover:underline"
+                className="text-(--brand) hover:underline"
               >
                 +976 7601 1124
               </a>
@@ -33,28 +33,28 @@ export function Footer() {
             <h3 className="text-lg font-semibold text-foreground">
               Холбоо барих
             </h3>
-            <div className="h-0.5 w-12 bg-[#319799] rounded-full" />
+            <div className="h-0.5 w-12 bg-(--brand) rounded-full" />
             <div className="space-y-3 text-sm text-muted-foreground">
               <div className="flex items-start gap-3">
-                <Phone className="h-5 w-5 text-[#319799] shrink-0 mt-0.5" />
+                <Phone className="h-5 w-5 text-(--brand) shrink-0 mt-0.5" />
                 <a
                   href="tel:+97676011124"
-                  className="hover:text-[#319799] transition-colors"
+                  className="hover:text-(--brand) transition-colors"
                 >
                   7601 1124
                 </a>
               </div>
               <div className="flex items-start gap-3">
-                <Mail className="h-5 w-5 text-[#319799] shrink-0 mt-0.5" />
+                <Mail className="h-5 w-5 text-(--brand) shrink-0 mt-0.5" />
                 <a
                   href="mailto:contact@bt-solution.com"
-                  className="hover:text-[#319799] transition-colors"
+                  className="hover:text-(--brand) transition-colors"
                 >
                   contact@bt-solution.com
                 </a>
               </div>
               <div className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-[#319799] shrink-0 mt-0.5" />
+                <MapPin className="h-5 w-5 text-(--brand) shrink-0 mt-0.5" />
                 <span>
                   Жон бээс төв 202 тоот, Баянгол дүүрэг, 3-р хороо,
                   Улаанбаатар хот, Монгол улс
@@ -66,23 +66,23 @@ export function Footer() {
           {/* Quick Links */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-foreground">Холбоос</h3>
-            <div className="h-0.5 w-12 bg-[#319799] rounded-full" />
+            <div className="h-0.5 w-12 bg-(--brand) rounded-full" />
             <nav className="flex flex-col space-y-2">
               <Link
                 href="/"
-                className="text-sm text-muted-foreground hover:text-[#319799] transition-colors"
+                className="text-sm text-muted-foreground hover:text-(--brand) transition-colors"
               >
                 Нүүр хуудас
               </Link>
               <Link
                 href="/about"
-                className="text-sm text-muted-foreground hover:text-[#319799] transition-colors"
+                className="text-sm text-muted-foreground hover:text-(--brand) transition-colors"
               >
                 Бидний тухай
               </Link>
               <Link
                 href="/products"
-                className="text-sm text-muted-foreground hover:text-[#319799] transition-colors"
+                className="text-sm text-muted-foreground hover:text-(--brand) transition-colors"
               >
                 Бүтээгдэхүүн
               </Link>
