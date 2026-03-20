@@ -2,9 +2,9 @@ import PillNav from "@/components/PillNav";
 import { usePathname } from "next/navigation";
 
 const navItems = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
+  { label: "Нүүр", href: "/" },
+  { label: "Тухай", href: "/about" },
+  { label: "Үйлчилгээ", href: "/services" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -15,11 +15,11 @@ export default function HeaderNav() {
       logo="/BDON.png"
       logoAlt="Company Logo"
       items={[
-        { label: "Home", href: "/" },
-        { label: "About", href: "/about" },
-        { label: "Products", href: "/products" },
-        { label: "AI Agent", href: "/ai-agent" },
-        { label: "Contact", href: "/contact" },
+        { label: "Нүүр", href: "/" },
+        { label: "Тухай", href: "/about" },
+        { label: "Үйлчилгээ", href: "/products" },
+        { label: "AI туслах", href: "/ai-agent" },
+        { label: "Холбогдох", href: "/contact" },
       ]}
       activeHref={pathname}
       className="custom-nav"
