@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "https://insurance.mn/:path*",
+      "destination": "https://www.insurance.mn/:path*",
+      "permanent": true
+    }
+  ]
+}
