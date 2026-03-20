@@ -388,7 +388,7 @@ export default function Page() {
       </section>
 
       {/* CTA Section with premium design */}
-      <section className="py-20 sm:py-24 px-6 lg:px-8">
+      <section className="py-20 sm:py-8 pt-0 px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-[#0A0779] via-[#1a17a9] to-[#0A0779] p-12 md:p-20">
             {/* Animated Background Pattern */}
@@ -420,17 +420,22 @@ export default function Page() {
                   asChild
                 >
                   <Link href="/contact">
-                    Үнэгүй зөвлөгөө авах
+                    Зөвлөгөө авах
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-white/30 text-white hover:bg-white/10 bg-transparent text-base px-8 py-6 rounded-xl hover:-translate-y-0.5 transition-all duration-300"
+                  className="border-2 border-white/30 text-white !important:text-white hover:bg-white/10 bg-transparent text-base px-8 py-6 rounded-xl hover:-translate-y-0.5 transition-all duration-300"
                   asChild
                 >
-                  <Link href="/products">Бүтээгдэхүүнтэй танилцах</Link>
+                  <Link
+                    href="/products"
+                    className="text-white hover:text-white"
+                  >
+                    Бүтээгдэхүүнтэй танилцах
+                  </Link>
                 </Button>
               </div>
             </div>
